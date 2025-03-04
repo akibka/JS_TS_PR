@@ -4,7 +4,7 @@ while (a <= 50) {
     if (a % 2 === 0) {
         console.log("kratne 2!");
     }
-    if (a % 3 === 0) {
+    if (a % 4 === 0) {
         console.log("kratne 2 & 4!");
     }
     a++;
