@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Task 2</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <section>
+            <h2 class="header">Header</h2>
+            <p id ='data'>DOM - document object model </p>
+            <span>Span</span>
+            <div>Invisible element</div>
+        </section>
+        <button id="btn">Add style</button>
+        <script>
+            document.getElementById ('btn').addEventListener ('click', function addStyle () {
+                const h2Element = document.querySelector ('.header');
+                h2Element.style.color = 'red';
+                h2Element.style.textDecoration = 'underline';
+
+                const pElement = document.getElementById ('data');
+                pElement.style.color = 'brown';
+                pElement.style.fontSize = '18px';
+                pElement.style.fontFamily = 'Comic Sans MS';
+
+                const spanElement = document.querySelector ('span');
+                spanElement.style.color = 'green';
+                spanElement.style.fontStyle = 'italic';
+
+                const divElement = document.querySelector ('div');
+                divElement.style.display = 'none';
+            })
+        </script>
+    </body>
+</html>

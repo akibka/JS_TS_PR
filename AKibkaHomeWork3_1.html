@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Task 1</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+        <body>
+            <header>
+                <h1>Welcome to My Task 1</h1>
+            </header>
+            <fieldset>
+                <legend align="center"> Новий користувач </legend>
+                <input value="Name" type="text" data-form="ПІБ" class="text-data arr" name="fio" placeholder="Введіть ПІБ">
+                <input value="+380-00-000-0000" type="phone" data-form="Номер телефону" class="arr" name="phone" placeholder="+380-00-000-0000">
+                <input value="2020-02-02" type="date" data-form="Дата народження" class="arr" name="birthday">
+                <input value="softserve@softserve.com" type="email" data-form="Електронна пошта" class="arr" placeholder="email@softserveinc.com"
+                    name="email">
+                <input type="submit" class="btn">
+            </fieldset>
+            <script>
+                const name = document.querySelector ('input[name="fio"]').value;
+                const phoneNumber = document.querySelector ('input[name="phone"]').value;
+                const dateOfBirth = document.querySelector ('input[name="birthday"]').value;
+                const emailAddress = document.querySelector ('input[name="email"]').value;
+                console.log ('ПІБ: ' + name + ' , Номер телефону: ' + phoneNumber + ' , Дата народження: ' + dateOfBirth + ', Email: ' + emailAddress);
+            </script>
+            <footer>
+                &copy; 2025 Andrii Kibka 
+            </footer>
+        </body>
+</html>

@@ -1,0 +1,15 @@
+let article = document.createElement('article'); 
+article.className = 'article postList';
+let container = document.createElement('div');
+container.id = 'container';
+let post1 = document.createElement('p');
+post1.textContent = 'Post 1'; 
+let post2 = document.createElement('p');
+post2.textContent = 'Post 2'; 
+let post3 = document.createElement('p');
+post3.textContent = 'Post 3';
+container.appendChild(post1); 
+container.appendChild(post2);
+container.appendChild(post3);
+article.appendChild(container);
+document.body.appendChild(article); 
