@@ -1,12 +1,5 @@
 // ------------------------Task 1-----------------------
 
-function removeNaN(obj) {
-    const numericValues = {};
-for (let key in obj) {
-    if
-    (typeof obj[key] === 'number') { numericValues[key] = obj[key]; } }
-return numericValues;
-}
 const scores = {
     programming: 88,
     design: 74,
@@ -16,7 +9,14 @@ const scores = {
     patterns: 65,
     philosophy: "transferred",
     network: 81
-};
+}
+function removeNaN(obj) {
+    const numericValues = {};
+for (let key in obj) {
+    if
+    (typeof obj[key] === 'number') { numericValues[key] = obj[key]; } }
+return numericValues;
+}
 const filteredScores = removeNaN(scores);
 console.log(filteredScores);
 
