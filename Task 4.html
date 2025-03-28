@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Home Work 7, Task 4</title>
+        <style> #emailList { margin-top: 20px; } </style>
+    </head>
+    <body>
+        <p> Email list </p>
+        <button id="getEmails">Get Emails</button>
+        <div id="emailList"></div>
+        <script>
+            document.getElementById('getEmails').addEventListener('click', function() {
+                const emailList = document.getElementById('emailList');
+                emailList.innerHTML = '';
+                // Clear previous results
+                try {
+                    const xhr = new XMLHttpRequest();
+                    xhr.open('GET', 'https://fakestoreapi.com/users', true);
+                    xhr.onload = function() {
+                        if (xhr.status >= 200 && xhr.status < 300) {
+                            const users = JSON.parse(xhr.responseText);
+                            users.forEach(user => {
+                                const emailItem = document.createElement('p');
+                                emailItem.textContent = user.email;
+                                emailList.appendChild(emailItem);
+                            });
+                        } else {
+                            console.error(`Error: ${xhr.status}`);
+                        }
+                    };
+                    xhr.onerror = function() {
+                        console.error('Request failed');
+                    };
+                    xhr.send();
+                }
+                catch (error) {
+                    console.error('An error occurred:', error);
+                }
+            });
+        </script> <!-- Or use external js file with script: <script src="myScript.js"></script> -->
+    </body>
+</html>
